@@ -1,27 +1,27 @@
 flowchart TD
-    A[Customer uploads CSV/Excel\nof 10-100 companies] --> B[iCustomer enriches data:\n- Company URL\n- Industry\n- Location\n- LinkedIn URL]
-    B --> C{User selects\nwaterfall enrichment?}
-    C -->|Yes| D[Additional data added:\n- # of employees\n- Company stage\n- Revenue]
+    A[Customer uploads CSV/Excel<br>of 10-100 companies] --> B[iCustomer enriches data:<br>- Company URL<br>- Industry<br>- Location<br>- LinkedIn URL]
+    B --> C{User selects<br>waterfall enrichment?}
+    C -->|Yes| D[Additional data added:<br>- # of employees<br>- Company stage<br>- Revenue]
     C -->|No| E
     D --> E
-    
+
     subgraph "Button Flow"
-        E[[FIND LOOKALIKES]] --> F[iCustomer displays\ntotal lookalikes found\ne.g., 4,049 companies]
+        E[[FIND LOOKALIKES]] --> F[iCustomer displays<br>total lookalikes found<br>e.g., 4,049 companies]
         F --> G[[ADD INTENT SIGNALS]]
-        G --> H[User selects from intent signals:\n- Recently funded\n- Growing headcount\n- New product announcement\n- New executives hired\n- Traffic increase]
-        H --> I[iCustomer narrows lookalikes\nbased on signals\ne.g., 1,022 matches]
-        I --> J[User selects quantity\nto purchase\ne.g., 100 per week]
-        J --> K[iCustomer displays selected accounts with:\n- Company name\n- Website\n- LinkedIn URL\n- # of employees\n- Location\n- Signal matched\n- Explanation of fit]
+        G --> H[User selects from intent signals:<br>- Recently funded<br>- Growing headcount<br>- New product announcement<br>- New executives hired<br>- Traffic increase]
+        H --> I[iCustomer narrows lookalikes<br>based on signals<br>e.g., 1,022 matches]
+        I --> J[User selects quantity<br>to purchase<br>e.g., 100 per week]
+        J --> K[iCustomer displays selected accounts with:<br>- Company name<br>- Website<br>- LinkedIn URL<br>- # of employees<br>- Location<br>- Signal matched<br>- Explanation of fit]
         K --> L[[FIND PEOPLE]]
-        L --> M[User specifies target\nperson criteria:\n- Title\n- Role\n- Level]
-        M --> N[iCustomer displays\ntotal people found\ne.g., 5,010 contacts]
-        N --> O[User selects quantity\nfor segment list\ne.g., 100 per week]
-        O --> P[iCustomer displays selected contacts with\nfull company and contact information]
+        L --> M[User specifies target<br>person criteria:<br>- Title<br>- Role<br>- Level]
+        M --> N[iCustomer displays<br>total people found<br>e.g., 5,010 contacts]
+        N --> O[User selects quantity<br>for segment list<br>e.g., 100 per week]
+        O --> P[iCustomer displays selected contacts with<br>full company and contact information]
     end
-    
+
     P --> Q{Export options}
-    Q -->|Option 1| R[[EXPORT TO\nSMARTLEADS/INSTANTLY]]
-    Q -->|Option 2| S[[EXPORT TO\nLINKEDIN/INSTAGRAM]]
-    
+    Q -->|Option 1| R[[EXPORT TO<br>SMARTLEADS/INSTANTLY]]
+    Q -->|Option 2| S[[EXPORT TO<br>LINKEDIN/INSTAGRAM]]
+
     classDef button fill:#4CAF50,stroke:#009688,color:white,stroke-width:2px,font-weight:bold,border-radius:10px;
     class E,G,L,R,S button;
